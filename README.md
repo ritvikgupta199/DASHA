@@ -1,6 +1,6 @@
 # DASHA
 
-Original PyTorch implementation of DASHA from the paper "Specialized Foundation Models Struggle to Beat Supervised Baselines"
+Original PyTorch implementation of DASHA from the paper ["Specialized Foundation Models Struggle to Beat Supervised Baselines"](https://arxiv.org/abs/2411.02796)
 
 ## Installation
 To run the code, install the dependencies:
