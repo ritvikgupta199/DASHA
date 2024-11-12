@@ -221,18 +221,14 @@ def get_config(dataset, args=None):
         params = dataset.split("_")
         horizon = int(params[1])
         dims, sample_shape, num_classes = 1, (1, 1, 512), 1
-        ks = [7, 9, 11, 13]
-        if horizon == 192:
-            ks = [9, 11, 13, 15]
-        if horizon == 336:
-            ks = [11, 13, 15, 17]
-        if horizon == 720:
-            ks = [13, 15, 17, 19]
-        kernel_choices_default, dilation_choices_default = ks, [1, 3, 7, 15]
+        if params[0] == "ILI":
+            sample_shape = (1, 1, 96)
+        kernel_choices_default, dilation_choices_default = [1, 3, 5, 7, 9, 11], [1, 3, 5]
         loss = nn.MSELoss()
 
-        batch_size = 64
+        batch_size = 512
         arch_default = 'wrn'
+        config_kwargs['mid_channels'] = 64
         config_kwargs['remain_shape']  = True
         config_kwargs['reshape_output'] = True
         config_kwargs['out_length'] = horizon

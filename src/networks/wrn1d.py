@@ -112,6 +112,7 @@ class ResNet1D(nn.Module):
         if self.remain_shape:
             x = x.permute(0, 2, 1)
             if self.reshape_output:
+                x = x.squeeze(1)
                 x = self.output(x)
         if self.activation == 'softmax':
             return F.log_softmax(x, dim=1)
