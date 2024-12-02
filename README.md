@@ -8,6 +8,7 @@ To run the code, install the dependencies:
 ```bash
 pip install torch==2.1.0+cu118 torchvision==0.16.0+cu118 torchaudio==2.1.0+cu118 torchtext==0.16.0 -f https://download.pytorch.org/whl/cu118/torch_stable.html
 pip install scipy tqdm ml-collections h5py requests tifffile
+pip install ray[tune] datasets rasterio pytorch-lightning matplotlib
 cd relax && pip install -e .
 ```
 or run the following command:
