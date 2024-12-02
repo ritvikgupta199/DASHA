@@ -9,3 +9,9 @@ ml-collections
 h5py
 requests
 tifffile
+scikit-learn
+ray[tune]
+datasets
+rasterio
+pytorch-lightning
+matplotlib
