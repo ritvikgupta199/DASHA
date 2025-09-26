@@ -1,6 +1,7 @@
 # DASHA
 
 Original PyTorch implementation of DASHA from the paper ["Specialized Foundation Models Struggle to Beat Supervised Baselines"](https://arxiv.org/abs/2411.02796)
+Implementation for **AutoAR** can be found [here](https://github.com/Zongzhe-Xu/AutoAR)
 
 ## Installation
 To run the code, install the dependencies:
